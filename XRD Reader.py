@@ -177,11 +177,10 @@ angles_roi_string = ", ".join(angles_roi_string2)
 
 print(angles_roi_string)
 
-output_string = dist_roi_string + angles_roi_string
+output_string = dist_roi_string + ", " + angles_roi_string
 
-f = open("XRD Reader Output.txt", "w")
-f.write(output_string)
-file.close()
+with open("XRD Reader Output.txt", "w") as f:
+    f.write(output_string)
 print("Output file generated.")
 input("Press Enter to continue...")
 
